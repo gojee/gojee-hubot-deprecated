@@ -17,7 +17,8 @@
   "dependencies": {
     "hubot": "2.3.2",
     "hubot-scripts": ">= 2.1.0",
-    "optparse": "1.0.3"
+    "optparse": "1.0.3",
+    "nodemailer": "0.3.35"
   },
 
   "engines": {
