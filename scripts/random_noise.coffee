@@ -8,5 +8,5 @@ sounds = ['secret', 'trombone', 'crickets', 'rimshot', 'vuvuzela',
 
 module.exports = (robot) ->
 
-  robot.hear /nicki/ig, (msg) ->
+  robot.hear /nicki|gruffalo|yorganic|minaj|muffin/ig, (msg) ->
     msg.send "/play #{sounds[parseInt(sounds.length*Math.random())]}"
