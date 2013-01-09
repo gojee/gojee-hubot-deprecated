@@ -9,4 +9,4 @@ sounds = ['secret', 'trombone', 'crickets', 'rimshot', 'vuvuzela',
 module.exports = (robot) ->
 
   robot.hear /nicki|gruffalo|yorganic|minaj|muffin/ig, (msg) ->
-    msg.sound sounds[parseInt(sounds.length*Math.random())]
+    robot.adapter.sound sounds[parseInt(sounds.length*Math.random())]
