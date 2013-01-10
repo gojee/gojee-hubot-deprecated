@@ -9,4 +9,8 @@ sounds = ['secret', 'trombone', 'crickets', 'rimshot', 'vuvuzela',
 module.exports = (robot) ->
 
   robot.hear /nicki|gruffalo|yorganic|minaj|muffin/ig, (msg) ->
-    robot.adapter.sound sounds[parseInt(sounds.length*Math.random())]
+    robot.bot.Room(msg.message.user.room).sound sounds[parseInt(sounds.length*Math.random())]
+    #@message text, "SoundMessage", callback
+    #self.post "/room/#{id}/speak", body, callback
+    #robot.adapter.sound sounds[parseInt(sounds.length*Math.random())]
+    #msg.send
