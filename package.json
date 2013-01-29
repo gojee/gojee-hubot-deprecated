@@ -22,7 +22,8 @@
     "connect": "2.3.4",
     "connect_router": "1.8.6",
     "nodemailer": "0.3.35",
-    "xml2js": "0.2.0"
+    "xml2js": "0.2.0",
+    "util": "0.4.9"
   },
 
   "engines": {
