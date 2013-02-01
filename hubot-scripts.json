@@ -1,5 +1,5 @@
 ["redis-brain.coffee", "tweet.coffee", "shipit.coffee", "kittens.coffee",
-"meme_generator.coffee", "octocat.coffee", "rimshot.coffee", "talkative.coffee",
-"goooood.coffee", "twss.coffee", "sonos.coffee", "stocks.coffee",
-"stock.coffee", "xkcd.coffee", "wolfram.coffee", "heroku-status.coffee",
-"wunderground.coffee"]
+  "meme_generator.coffee", "octocat.coffee", "rimshot.coffee",
+  "talkative.coffee", "goooood.coffee", "twss.coffee", "sonos.coffee",
+  "stocks.coffee", "stock.coffee", "xkcd.coffee", "wolfram.coffee",
+  "heroku-status.coffee", "wunderground.coffee"]

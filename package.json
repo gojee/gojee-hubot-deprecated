@@ -23,7 +23,9 @@
     "connect_router": "1.8.6",
     "nodemailer": "0.3.35",
     "xml2js": "0.2.0",
-    "util": "0.4.9"
+    "util": "0.4.9",
+    "redis": "0.7.2",
+    "hubot-scripts": "~> 2.4.1"
   },
 
   "engines": {
