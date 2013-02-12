@@ -31,16 +31,18 @@ module.exports = (robot) ->
     @current_user = msg.message.user.name
     @room_id = msg.message.user.room
     message = msg.message.text
-    mentioned_user = msg.match[0].slice(1)
-    return unless robot.brain.data.mentions_nicknames[mentioned_user]?
 
-    mail_options =
-      to: robot.brain.data.mentions_nicknames[mentioned_user]
-      from: 'no-reply'
-      subject: "#{@current_user} mentioned you in Campfire [#{process.env.HUBOT_CAMPFIRE_ACCOUNT}]"
-      html: "Hi #{mentioned_user.charAt(0).toUpperCase()}#{mentioned_user.slice(1)},
-        <p>#{@current_user} just mentioned you in the room [#{@room_id}].</p>
-        <b>#{@current_user}:</b> #{message}"
+    for user in msg.match
+      mentioned_user = user.slice(1)
+      continue unless robot.brain.data.mentions_nicknames[mentioned_user]?
+
+      mail_options =
+        to: robot.brain.data.mentions_nicknames[mentioned_user]
+        from: 'no-reply'
+        subject: "#{@current_user} mentioned you in Campfire [#{process.env.HUBOT_CAMPFIRE_ACCOUNT}]"
+        html: "Hi #{mentioned_user.charAt(0).toUpperCase()}#{mentioned_user.slice(1)},
+          <p>#{@current_user} just mentioned you in the room [#{@room_id}].</p>
+          <b>#{@current_user}:</b> #{message}"
 
     send_email mail_options
 
