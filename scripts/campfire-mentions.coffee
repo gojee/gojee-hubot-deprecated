@@ -12,6 +12,7 @@
 #   hubot mentions assign email foo@bar.com to baz
 #   hubot mentions remove user baz
 #   hubot mentions list users
+#   hubot mentions help
 #
 # Author:
 #   rickyc
@@ -61,3 +62,12 @@ module.exports = (robot) ->
   # list users
   robot.respond /mentions list users/i, (msg) ->
     msg.send util.inspect robot.brain.data.mentions_nicknames
+
+
+  # help
+  robot.respond /mentions help/i, (msg) ->
+    msg.send """
+     hubot mentions assign email contact@example.com to example
+     hubot mentions remove user example
+     hubot mentions list users
+   """
